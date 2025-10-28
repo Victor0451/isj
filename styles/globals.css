@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: gainsboro;
+}
+
+.werchowlogo {
+  width: 165px;
+  height: 105px;
+}
+
+
+.smlogonoti {
+  margin-top: -25px;
+  width: 165px;
+  height: 105px;
+}
+
+.butlist:hover {
+  opacity: 0.6;
+  color: gray;
+  transition: opacity 0.5s ease 0s;
+
+}
+
+.conformnovell {
+  font-size: 1em !important;
+  /* 40px/16=2.5em */
+  font-weight: bold !important;
+  line-height: 30px !important;
+}
+
+.certFondo {
+
+  background-image: url("../public/img/certificado.jpg");
+  background-size:contain;
+  background-repeat:no-repeat;
+  background-position: center center;
+  
+
+}
+
+.ruleta {
+  transform: rotate(720deg);
+  transition: transform 0.5s;
+}
+
+.ruleta:active {
+  transform: rotate(0deg);
+  transition: 0s;
+}
+
+.verticalScroll {
+  height: 500px !important;
+  overflow-y: scroll !important;
+}
+

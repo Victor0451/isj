@@ -241,7 +241,7 @@ const FormCobranza = ({
               </div>
             </div>
 
-            {!puestos.puesto_sm || !puestos.serie_sm ? (
+            {!puestos.puesto_isj || !puestos.serie_isj ? (
               <Alert color="orange" icon={<IconSolid />} className="mt-5 mb-5">
                 TU USUARIO NO POSEE PUESTO NI SERIE CONFIGURADAS
               </Alert>

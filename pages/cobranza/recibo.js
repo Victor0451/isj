@@ -312,7 +312,7 @@ function socios(props) {
     let diaCurso = parseInt(moment().format("DD"));
 
     const prepago = {
-      SERIE: puestos.serie_sm,
+      SERIE: puestos.serie_isj,
       NRO_RECIBO: 0,
       MES: mesSel,
       ANO: anoSel,
@@ -326,7 +326,7 @@ function socios(props) {
       MAN_COM: "X",
       MOVIM: "P",
       OPERADOR: usu.usuario,
-      PUESTO: puestos.puesto_sm,
+      PUESTO: puestos.puesto_isj,
       ZONA: ficha.ZONA,
       SUCURSAL: ficha.SUCURSAL,
       EMPRESA: "SAN MIGUEL",
@@ -416,7 +416,10 @@ function socios(props) {
         }
       })
       .catch((error) => {
-        toast.error("Ocurrio un error al traer el recibo, posiblemente no tengas configurada una serie.", "ATENCION");
+        toast.error(
+          "Ocurrio un error al traer el recibo, posiblemente no tengas configurada una serie.",
+          "ATENCION"
+        );
         console.log(error);
       });
   };
@@ -435,7 +438,7 @@ function socios(props) {
 
           guardarPuestos(dat);
 
-          traerUltimoRecibo(dat.serie_sm, dat.puesto_sm);
+          traerUltimoRecibo(dat.serie_isj, dat.puesto_isj);
         } else if (res.data.length === 0) {
           toast.warning("El usuario no tiene una serie configurada.");
         }
